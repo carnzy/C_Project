@@ -1,0 +1,52 @@
+问题描述
+
+编写一个程序，建立了一条单向链表，每个结点包含姓名、学号、英语成绩、数学成绩和C++成绩，并通过链表操作平均最高的学生和平均分最低的学生并且输出。
+
+输入格式
+
+输入n+1行，第一行输入一个正整数n，表示学生数量；接下来的n行每行输入5个数据，分别表示姓名、学号、英语成绩、数学成绩和C++成绩。注意成绩有可能会有小数。
+
+输出格式
+
+输出两行，第一行输出平均成绩最高的学生姓名。第二行输出平均成绩最低的学生姓名。
+
+样例输入
+
+2
+yx1 1 45 67 87
+yx2 2 88 90 99
+样例输出
+
+yx2
+yx1
+请从以下四个选项中选择空白处的内容。
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    struct student
+    {
+        string xm;
+        int xh;
+        double yy;
+        double sx;
+        double cpp;
+    };
+    student a[1000];
+    int n;
+    double sum = 0, min = 301, max = 0;
+    string mins, maxs;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> a[i].xm >> a[i].xh >> a[i].yy >> a[i].sx >> a[i].cpp;
+        sum = a[i].yy + a[i].sx + a[i].cpp;
+        __________________;
+    }
+    cout << maxs << endl
+         << mins;
+    return 0;
+}
+提示： 类似冒泡法求最大值最小值
