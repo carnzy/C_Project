@@ -1,7 +1,7 @@
 #include<stdio.h>
 int cut_noodles(int times)
 {
-    int result = 2, t = 1;  //有什么变量？结果、对折次数
+    int result = 2, t = 1;  
     for(int i = 0; i < times; i++)
     {
         result += t;
@@ -14,8 +14,8 @@ int cut_noodles(int times)
 
 int main() {
     int result;
-    int times = 10;//声明需要的变量：结果、对折次数
-    result = cut_noodles(times);//用函数返回结果给result
-    printf("对折%d次，从中间切一刀得到的面条数是%d\n",times,result);//打印说明变化
+    int times = 10;
+    result = cut_noodles(times);
+    printf("对折%d次，从中间切一刀得到的面条数是%d\n",times,result);
     return 0;
 }
