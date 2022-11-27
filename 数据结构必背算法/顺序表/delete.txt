@@ -1,0 +1,4 @@
+bool ListDelete(SqList &L, int i, Elemtype &e)
+{
+    if(L.length)
+}

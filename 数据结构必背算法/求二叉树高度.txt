@@ -1,0 +1,11 @@
+int getDepth(BTnode *t)
+{
+    int L,R;
+    if(p==null) return 0;
+    else
+    {
+        L=getDepth(p->lchild);
+        R=getDepth(p->rchild);
+        return (L>R?L:R)+1;
+    } 
+}

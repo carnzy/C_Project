@@ -1,0 +1,15 @@
+bool ListInsert(SqList &L,int i,Elemtype e)
+{
+    if(i < 1 || i > L.length+1)
+        return false;
+    if(L.length >= Maxsize)
+        return false;
+    //两种无效情况：1.要插入的位置i不在范围;2.顺序表已满
+    for(int j = L.length; j >= i; j--)
+    {
+        L.data[j] = L.data[j-1];//从插入位置i到最后全部后移一位，即把前一个（j-1）给当前位置（j）
+    }
+    L.data[i-1] = e;//在i位置插入怎么写i-1？因为i从1开始而数组从0开始，数组的0号是人的第一个
+    L.length ++;//因为插入了一个，所以加一
+    return true;
+}
